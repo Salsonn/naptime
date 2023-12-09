@@ -1,0 +1,11 @@
+[Unit]
+Description=FrameWakeup
+
+[Timer]
+Unit=FrameWakeup.service
+OnCalendar=*-*-* 06:04,05,06
+Persistent=false
+
+[Install]
+WantedBy=timers.target
+  

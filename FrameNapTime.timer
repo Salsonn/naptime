@@ -1,0 +1,11 @@
+[Unit]
+Description=FrameNapTime
+
+[Timer]
+Unit=FrameNapTime.service
+OnCalendar=*-*-* 23:01,02,03
+Persistent=false
+
+[Install]
+WantedBy=timers.target
+  

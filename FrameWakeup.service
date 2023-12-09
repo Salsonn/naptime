@@ -1,0 +1,18 @@
+[Unit]
+# FrameNapTime puts the device to sleep for the night.
+Description=FrameNapTime
+RefuseManualStop=true
+#RefuseManualStart=true
+
+[Service]
+Type=oneshot
+WorkingDirectory=~
+ExecStart=variety --resume
+
+# Test Command (20 seconds instead of 8 hours
+#ExecStart=/usr/sbin/rtcwake -s 20 -m mem | tee -a /var/log/FrameNapTime.log
+
+# These lines do not work because service runs as root.
+#User=frame
+#ExecStartPost=variety -n;
+  
